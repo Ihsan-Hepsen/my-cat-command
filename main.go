@@ -19,16 +19,16 @@ func main() {
 		return
 	}
 
-	fileName := os.Args[1]
-	filePath := filepath.Join(fileName)
+	for _, arg := range os.Args[1:] {
+		filePath := filepath.Join(arg)
 
-	// read file
-	file, err := os.Open(filePath)
-	check(err)
-	defer file.Close()
+		file, err := os.Open(filePath)
+		check(err)
+		defer file.Close()
 
-	_, err = io.Copy(os.Stdout, file)
-	check(err)
+		_, err = io.Copy(os.Stdout, file)
+		check(err)
+		fmt.Println()
+	}
 
-	defer fmt.Println()
 }
