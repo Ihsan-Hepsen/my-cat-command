@@ -1,5 +1,10 @@
 # My `cat` Command for Windows
-- My version of cat command (my-cat) that works on Windowds written in Go. 
+A simple implementation of the `cat` command (`my-cat`) for Windows, written in Go. It supports reading single or multiple files, with an optional line numbering feature.
+
+## Features
+- **Single File Reading**: Display the contents of a single file.
+- **Multiple File Reading**: Concatenate and display contents of multiple files.
+- **Line Numbering**: Add line numbers to the output using the `-n` flag.
 
 ## Usage
 ```bash
